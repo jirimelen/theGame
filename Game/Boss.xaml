@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Game.Boss"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Game"
+             mc:Ignorable="d" 
+             d:DesignHeight="729" d:DesignWidth="1350">
+    <Canvas x:Name="SBcanvas" Width="600" Height="320" Background="white" MouseMove="Canvas_MouseMove">
+        <Ellipse Height="100" Stroke="Red" StrokeThickness="5" Width="100" Canvas.Left="250" Canvas.Top="150"/>
+
+        <Line x:Name="LeftInner" X1="280" X2="150" Y1="155" Y2="150" Stroke="Black" StrokeThickness="2"></Line>
+        <Line x:Name="LeftOuter" X1="150" X2="60" Y1="150" Y2="250" Stroke="Red" StrokeThickness="2"></Line>
+
+        <Line x:Name="RightInner" X1="320" X2="450" Y1="155" Y2="150" Stroke="Black" StrokeThickness="2"></Line>
+        <Line x:Name="RightOuter" X1="450" X2="540" Y1="150" Y2="250" Stroke="Red" StrokeThickness="2"></Line>
+    </Canvas>
+</UserControl>

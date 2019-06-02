@@ -1,0 +1,62 @@
+﻿<Page x:Class="Game.Pages.Level"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Game"
+      mc:Ignorable="d" 
+      d:DesignHeight="729" d:DesignWidth="1350"
+      Title="Level">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1040"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="GameCanvas" Background="#fff" MouseMove="Canvas_MouseMove" MouseDown="GameCanvas_MouseDown" MouseUp="GameCanvas_MouseUp" Cursor="None">
+            <Image Height="729" Width="1040" Canvas.Top="0" Canvas.Left="0">
+                <Image.Source>
+                    <BitmapImage DecodePixelWidth="300" UriSource="../images/levelBackground.png" />
+                </Image.Source>
+            </Image>
+
+            <local:SpaceShip x:Name="Ship" Canvas.Left="470" Canvas.Top="443" Width="190"></local:SpaceShip>
+
+            <Border CornerRadius="11,0,0,11" Height="26" Width="450" Background="Gray" Opacity=".3" BorderThickness="3,3,0,3" BorderBrush="black" Canvas.Right="566" Canvas.Bottom="22"></Border>
+            <Border x:Name="HealthBar" Height="20" Width="447" Background="Red" Canvas.Right="566" Canvas.Bottom="25" CornerRadius="10,0,0,10"></Border>
+
+            <Border CornerRadius="0,11,11,0" Height="26" Width="450" Background="Gray" Opacity=".3" BorderThickness="0,3,3,3" BorderBrush="black" Canvas.Left="566" Canvas.Bottom="22"></Border>
+            <Border x:Name="HeatBar" Height="20" Width="447" Background="Blue" Canvas.Left="566" Canvas.Bottom="25" CornerRadius="0,10,10,0"></Border>
+
+            <Grid x:Name="modal_win" Visibility="Hidden" Width="320" Height="240" Background="LightGreen" Canvas.Left="383" Canvas.Top="258">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="you won" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"></Label>
+
+                <Button Grid.Row="2" Margin="32,17,32,16" Content="Zpět do garáže" FontSize="25" Click="Navigate_garage"></Button>
+            </Grid>
+            <Grid x:Name="modal_lose" Visibility="Hidden" Width="320" Height="166" Background="LightGreen" Canvas.Left="383" Canvas.Top="332">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="you lost" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"></Label>
+
+                <Button Grid.Row="2" Margin="32,17,32,16" Content="Zpět do garáže" FontSize="25" Click="Navigate_garage"></Button>
+            </Grid>
+
+            <Ellipse Fill="Purple" Height="100" Canvas.Left="470" Canvas.Bottom="-20" Width="100"/>
+
+
+        </Canvas>
+        <Grid Grid.Column="1" Background="DimGray">
+            <Button Content="INJURE" HorizontalAlignment="Left" Margin="96,131,0,0" VerticalAlignment="Top" Width="162" Height="116" Click="Button_Click"/>
+
+        </Grid>
+    </Grid>
+</Page>

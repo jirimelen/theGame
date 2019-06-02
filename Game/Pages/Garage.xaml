@@ -1,0 +1,97 @@
+﻿<Page x:Class="Game.Pages.Garage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Game"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1366"
+      Title="Garage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="199*"/>
+            <RowDefinition Height="26*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="GarageCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#fff" Grid.ColumnSpan="2" Grid.RowSpan="2">
+
+            <Border BorderBrush="Black" BorderThickness="1" Height="135" Canvas.Left="25" Canvas.Top="25" Width="270">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="20">Shield</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">HP: 800</TextBlock>
+                    <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" FontSize="18">změnit</Button>
+                    <Button Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" FontSize="18">Vylepšit</Button>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="1" Height="175" Canvas.Left="25" Canvas.Top="185" Width="270">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="20">Left cannon</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">Damage: 800</TextBlock>
+                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">Type: Laser</TextBlock>
+                    <Button Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" FontSize="18">změnit</Button>
+                    <Button Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" FontSize="18">Vylepšit</Button>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="1" Height="175" Canvas.Left="25" Canvas.Top="385" Width="270">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="20">Right cannon</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">Damage: 800</TextBlock>
+                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">Type: Laser</TextBlock>
+                    <Button Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" FontSize="18">změnit</Button>
+                    <Button Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" FontSize="18">Vylepšit</Button>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="1" Height="135" Canvas.Left="25" Canvas.Top="585" Width="270">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="20">Body</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">HP: 800</TextBlock>
+                    <Button Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" FontSize="18">změnit</Button>
+                    <Button Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" FontSize="18">Vylepšit</Button>
+                </Grid>
+            </Border>
+        </Canvas>
+        <Button Click="Button_Click" Content="find level" Grid.Column="1" Grid.Row="1"/>
+    </Grid>
+</Page>

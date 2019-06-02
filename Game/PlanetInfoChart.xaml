@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Game.PlanetInfoChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Game"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="265">
+    <UserControl.Resources>
+        <Style x:Key="infoLabel" TargetType="Label">
+            <Setter Property="FontWeight" Value="SemiBold"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Foreground" Value="#fff"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="63*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="2" Grid.RowSpan="5" CornerRadius="20" BorderThickness="2" BorderBrush="#FF9FB5FF">
+            <Border.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FD98A1F5"/>
+                    <GradientStop Color="#FF2A3387" Offset="1.3"/>
+                </RadialGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Label  x:Name="Planet_name" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#fff" FontWeight="SemiBold" FontSize="28">hey</Label>
+        <Label Grid.Column="0" Grid.Row="1" Style="{StaticResource infoLabel}">difficulty:</Label>
+        <Label x:Name="Planet_difficulty" Grid.Column="1" Grid.Row="1" Style="{StaticResource infoLabel}" HorizontalAlignment="Left">200</Label>
+        <Label Grid.Column="0" Grid.Row="2" Style="{StaticResource infoLabel}">type:</Label>
+        <Label x:Name="Planet_type" Grid.Column="1" Grid.Row="2" Style="{StaticResource infoLabel}" HorizontalAlignment="Left">Ice</Label>
+        <Label Grid.Column="0" Grid.Row="3" Style="{StaticResource infoLabel}">common drop:</Label>
+        <Label x:Name="Planet_drop" Grid.Column="1" Grid.Row="3" Style="{StaticResource infoLabel}" HorizontalAlignment="Left">Ice chungus</Label>
+        <Label Grid.Column="0" Grid.Row="4" Style="{StaticResource infoLabel}">boss drop:</Label>
+        <Label x:Name="Planet_bossdrop" Grid.Column="1" Grid.Row="4" Style="{StaticResource infoLabel}" HorizontalAlignment="Left">Laser enhancer</Label>
+    </Grid>
+</UserControl>
